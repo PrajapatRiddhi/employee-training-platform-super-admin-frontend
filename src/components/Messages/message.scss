@@ -1,0 +1,138 @@
+.message-sidebar {
+    color: #333;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    li {
+        margin: 10px 0 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px; // Base padding
+        width: 100%;
+        transition: background-color 0.3s;
+        cursor: pointer;
+        padding: 12px;
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        span {
+            &.text-secondary {
+                color: #333;
+                font-size: 14px;
+            }
+        }
+
+        // Common styles for hover and selected state
+        &:hover,
+        &.selected {
+            border-radius: 4px;
+            background: rgba(67, 121, 238, 0.1317) !important;
+            color: #4379ee; // Text color change on hover/selected
+            padding: 12px;
+
+            span,
+            div {
+                font-weight: 700;
+                color: #4379ee !important;
+            }
+        }
+    }
+}
+
+.message-card {
+    .ant-card-body {
+        padding: 0;
+    }
+}
+
+.message-listing {
+    .search-input {
+        margin: 20px 26px;
+        display: flex;
+        max-width: 794px;
+        width: 100%;
+        height: 40px !important;
+        // padding: 8px 12px 8px 8px;
+        align-items: center;
+        color: #333;
+        font-size: 16px;
+        flex-shrink: 0;
+
+        .ant-input-outlined {
+            border-radius: 4px !important;
+            border: 1px solid #E8E8E8 !important;
+            background: #F5F6FA !important;
+
+        }
+
+        // @media screen and (max-width: 750px) {
+        //     max-width: 100%;
+
+        // }
+    }
+
+    .message-list-ul {
+        padding: 25px;
+
+        .message-list-li {
+            cursor: pointer;
+            color: #333;
+            font-family: "Nunito Sans";
+            border-bottom: 1px solid #E0E0E0;
+            td {
+                padding: 10px;
+            }
+
+            .from-user {
+                font-weight: 700;
+                font-size: 16px; // Set fixed width for name
+            }
+            .message {
+                font-size: 14px;
+                color: #4F4F4F;
+            }
+
+            .time {
+                font-size: 14px;
+                font-weight: 600;
+                color: #828282;
+                width: 100px;
+            }
+
+            &:hover,
+            &.selected {
+                background: rgba(67, 121, 238, 0.1317) !important; // Background color change on hover
+                color: #4379ee; // Text color change on hover for the entire list item
+
+                // Change text color for specific elements on hover
+                .from-user,
+                .message,
+                .time {
+                    color: #4379ee; // Change text color on hover
+                }
+            }
+
+        }
+
+        // &::after {
+        //     content: "";
+        //     display: block;
+        //     width: 100%;
+        //     height: 1px;
+        //     background: #E0E0E0; // Line color
+        //     margin-top: 10px; // Space above the line
+        // }
+        .message-list-li:last-child {
+            border-bottom: none; // Remove border from the last child
+        }
+
+    }
+
+
+}

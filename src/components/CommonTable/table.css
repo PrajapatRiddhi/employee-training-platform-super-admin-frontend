@@ -1,0 +1,287 @@
+.Container {
+  padding: 20px !important;
+  background-color: #fff;
+  border-radius: 20px !important;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.16), 0px 0px 8px 0px rgba(0, 0, 0, 0.04);
+}
+
+.maindiv {
+  overflow-x: auto;
+}
+
+.ant-table-content table {
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border: 1px solid #d9dde6;
+  margin-top: 1rem;
+}
+.ant-table-content table thead {
+  border: 1px solid #171624 !important;
+}
+.ant-table-content table th {
+  font-size: 16px;
+  font-family: "Bai Jamjuree" !important;
+  line-height: 16px;
+  font-style: normal;
+  font-weight: 600 !important;
+  color: #333 !important;
+  background-color: #f1f5ff !important;
+  border-right: 1px solid #e9e7f5;
+}
+.ant-table-content table tr {
+  border: 1px black;
+}
+.ant-table-content table td {
+  font-size: 16px;
+  font-family: "Bai Jamjuree" !important;
+  line-height: 22px;
+  font-style: normal;
+  font-weight: 500;
+  border-right: 1px solid #e9e7f5;
+  color: #333;
+  background-color: #fff !important;
+  text-align: left;
+  padding: 15px !important;
+}
+
+.filterContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-field {
+  opacity: 100;
+  transition: opacity 0.3s;
+}
+
+/* .filter {
+    margin-top: 8px !important;
+} */
+.placeholder {
+  color: #0a0033;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.filterbtn {
+  background-color: #f6f6f7 !important;
+  border-radius: 4px !important;
+  border: 1px solid #c9cccf !important;
+  color: #0a0033 !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  height: auto;
+}
+
+.goBtn {
+  width: -moz-max-content;
+  width: max-content;
+  border: 1px solid #199fda !important;
+  border-radius: 4px !important;
+  height: auto !important;
+  color: #199fda !important;
+  font-weight: 500;
+}
+
+.clearBtn {
+  border-radius: 4px !important;
+  height: auto !important;
+  border-color: #d9d9d9 !important;
+  color: #999999 !important;
+}
+
+.mainContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.secondaryContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.secondaryContainer .ant-input-affix-wrapper {
+  height: 36px;
+  padding: 5px;
+}
+.secondaryContainer .ant-input-affix-wrapper .ant-input {
+  font-family: "Bai Jamjuree" !important;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  height: auto;
+}
+.secondaryContainer .ant-input-affix-wrapper .ant-input:focus {
+  color: #333;
+  /* Adjust color as needed */
+  border-color: #0069d9;
+  /* Adjust border color as needed */
+}
+
+/* Export Container */
+.exportContainer {
+  display: flex;
+  margin-left: 10px;
+}
+.exportContainer .commonButton {
+  height: 36px;
+  background-color: #59bf87 !important;
+  font-family: "Bai Jamjuree" !important;
+}
+.exportContainer .commonButton:hover {
+  background-color: #59bf87 !important;
+}
+
+.pagination {
+  padding-top: 20px;
+  display: flex;
+  justify-content: end;
+}
+
+.cancleBtnViewWidth {
+  border-radius: 9999px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  width: 50%;
+}
+
+.cancleBtnwidth {
+  border-radius: 9999px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  width: 100%;
+}
+
+.saveBtn {
+  width: 100% !important;
+  border-radius: 9999px;
+  background-color: #1677ff;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.cancleBtnAction {
+  width: 100%;
+  border-radius: 9999px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.saveBtnAction {
+  width: 100%;
+  background-color: rgb(239, 68, 68);
+  border-radius: 9999px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.saveBtnAction:hover {
+  background-color: rgb(248, 113, 113) !important;
+}
+
+.popupMain {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.viewUser,
+.editUser,
+.deleteUser {
+  width: calc(100% - 20px);
+  font-size: 14px;
+  line-height: 39px;
+  color: #666666;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+}
+
+.viewUser {
+  border-top-left-radius: 1rem;
+  /* 16px */
+  border-top-right-radius: 1rem;
+  /* 16px */
+  border-bottom: 1px solid #d7d8e4;
+}
+
+.viewUser:hover {
+  background-color: #0ea5e9;
+  color: #ffffff;
+}
+
+.editUser {
+  border-bottom: 1px solid #d7d8e4;
+}
+
+.editUser:hover {
+  background-color: #0ea5e9;
+  color: #ffffff;
+}
+
+.deleteUser {
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.deleteUser:hover {
+  background-color: #0ea5e9;
+  color: #ffffff;
+}
+
+.selectContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.custom-filter-dropdown {
+  height: auto;
+}
+.custom-filter-dropdown .ant-select-selector {
+  border-radius: 4px;
+  border: 1px solid #d9d9d9 !important;
+}
+
+.custom-date-range-picker {
+  border-radius: 4px;
+  color: #000;
+  border: 1px solid #d9d9d9 !important;
+}
+.custom-date-range-picker .ant-picker-input {
+  color: #000;
+}
+.custom-date-range-picker .ant-picker-input input::-moz-placeholder {
+  color: #000;
+}
+.custom-date-range-picker .ant-picker-input input::placeholder {
+  color: #000;
+}
+
+.custom-avatar {
+  background: #d3d3d3;
+  border-radius: 8px;
+}
+
+.slidebar {
+  width: 20%;
+}/*# sourceMappingURL=table.css.map */

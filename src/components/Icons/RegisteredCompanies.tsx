@@ -1,0 +1,23 @@
+import React from "react";
+
+const RegisteredCompanies = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="60"
+      height="60"
+      viewBox="0 0 60 60"
+      fill="none"
+    >
+      <path
+        opacity="0.21"
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0 30V37C0 49.7025 10.2975 60 23 60H30H37C49.7025 60 60 49.7025 60 37V30V23C60 10.2975 49.7025 0 37 0H30H23C10.2975 0 0 10.2975 0 23V30Z"
+        fill="#A742F6"
+      />
+    </svg>
+  );
+};
+
+export default RegisteredCompanies;

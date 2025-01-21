@@ -1,0 +1,33 @@
+.multi-email-container {
+    border-radius: 4px;
+    border: 1px solid #E8E8E8;
+    background: #ffffff;
+    min-height: 100px;      /* Minimum height */
+    overflow-wrap: break-word; /* Break long email addresses */
+    display: flex;
+    flex-wrap: wrap;       /* Allow multiple lines */
+    align-items: center;    /* Center items vertically */
+  }
+  
+  .textarea-style {
+    border: none;           /* Remove default border */
+    outline: none;         /* Remove outline on focus */
+    width: 100%;           /* Full width */
+    min-height: 100px;     /* Adjust height as needed */
+    resize: none;          /* Prevent resizing */
+  }
+  
+  .email-tag {
+    background-color: #e7f0ff; /* Background color for tags */
+    border-radius: 4px;        /* Rounded corners for tags */
+    padding: 4px 8px;          /* Padding for tags */
+    margin-right: 5px;         /* Space between tags */
+    display: flex;              /* Flex display to align items */
+    align-items: center;        /* Center content vertically */
+  }
+  
+  .remove-email {
+    cursor: pointer;           /* Pointer cursor on hover */
+    margin-left: 5px;         /* Space between email and cancel icon */
+  }
+  
