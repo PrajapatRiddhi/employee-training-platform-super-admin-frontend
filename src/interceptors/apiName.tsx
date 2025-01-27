@@ -1,6 +1,7 @@
 export const API_ENDPOINTS = {
   uploadFile: "/rest/upload_file",
   ADMIN_LOGIN: "/auth/login",
+  ADMIN_FORGOT_PASSWORD: "/auth/forgot-password",
   Employee_LOGIN: "/user-auth/login",
   COUNTRY_LIST_API: "/country/autocomplete",
   STATE_API: "/state/country-states-list",
