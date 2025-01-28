@@ -150,26 +150,20 @@ export const companyAdminNavBarItems: NavBarItem[] = [
   },
   {
     id: 7,
-    label: "Content Library",
+    label: "Manage Courses",
     icon: <ContentLibraryIcon />,
     routePath: "",
     children: [
       {
         id: 1,
-        label: "Library",
-        routePath: "/content/library",
-        icon: <LibraryIcon />,
-      },
-      {
-        id: 2,
         label: "Courses",
-        routePath: "/content/manage-courses",
+        routePath: "/manage-courses",
         icon: <SubCoursesIcon />,
       },
       {
-        id: 3,
+        id: 1,
         label: "Categories",
-        routePath: "/content/categories",
+        routePath: "/manage-courses/categories",
         icon: <CategoriesIcon />,
       },
     ],
