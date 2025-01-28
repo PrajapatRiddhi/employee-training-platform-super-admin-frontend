@@ -1,0 +1,14 @@
+{
+  "apps": [
+    {
+      "name": "ET Super Admin",
+      "script": "npm",
+      "args": "start",
+      "cwd": "/var/www/html/employee-training-platform-super-admin-frontend",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": 7000
+      }
+    }
+  ]
+}
