@@ -8,31 +8,21 @@ import ContentLibraryIcon from "../Icons/ContentLibraryIcon";
 import ReportsIcon from "../Icons/ReportsIcon";
 import BlogArticlesIcon from "../Icons/BlogArticlesIcon";
 import GroupsIcon from "../Icons/GroupsIcon";
-import ImportUsersIcon from "../Icons/ImportUsersIcon";
-import OnboardingIcon from "../Icons/OnboardingIcon";
-import MergeUsersIcon from "../Icons/MergeUsersIcon";
-import MessagesIcon from "../Icons/MessagesIcon";
-import ManageRolesRightsIcon from "../Icons/ManageRolesRightsIcon";
-import RiskBoosterIcon from "../Icons/RiskBoosterIcon";
-import ProgressTrackingIcon from "../Icons/ProgressTrackingIcon";
 import SupportHelpIcon from "../Icons/SupportHelpIcon";
 import PlanAccountIcon from "../Icons/PlanAccountIcon";
 import SettingMenuIcon from "../Icons/SettingMenuIcon";
-import PhishingOverview from "../Icons/PhishingOverview";
 import PhishingProgram from "../Icons/PhishingProgram";
 import PhishingDestinationPageIcon from "../Icons/PhishingDestinationPageIcon";
 import PhishingDomainIcon from "../Icons/PhishingDomainIcon";
 import PhishingViewResult from "../Icons/PhishingViewResult";
 import LibraryIcon from "../Icons/LibraryIcon";
 import PolicieIcon from "../Icons/PolicieIcon";
-import LoginAvatar from "../Icons/LoginAvatar";
 import DepartmentIcon from "../Icons/DepartmentIcons";
 import AssessmentMenuIcon from "../Icons/AssessmentMenuIcon";
 import SurveyListMenuIcon from "../Icons/SurveyListMenuIcon";
 import SurveyProgramMenuIcon from "../Icons/SurveyProgramMenuIcon";
 import SubCoursesIcon from "../Icons/SubCoursesIcon";
 import CategoriesIcon from "../Icons/CategoriesIcon";
-// import UserAvt from "/public/user-alt.png"
 import {Image} from "antd";
 export interface NavBarItem {
   id: number;
@@ -51,44 +41,26 @@ export const companyAdminNavBarItems: NavBarItem[] = [
   },
   {
     id: 2,
-    label: "Phishing",
+    label: "Phishing Simulation",
     icon: <PhishingIcon />,
     routePath: "",
     children: [
       {
         id: 1,
-        label: "Overview",
-        routePath: "/phishing/program/overview",
-        icon: <PhishingOverview />,
-      },
-      {
-        id: 2,
-        label: "Program",
-        routePath: "/phishing/program",
-        icon: <PhishingProgram />,
-      },
-      {
-        id: 3,
         label: "Phishing Destination Page",
         routePath: "/phishing/phishing-destination",
         icon: <PhishingDestinationPageIcon />,
       },
       {
-        id: 4,
+        id: 2,
         label: "Domain",
         routePath: "/phishing/domain",
         icon: <PhishingDomainIcon />,
       },
       {
-        id: 5,
-        label: "View Results",
-        routePath: "/phishing/view-results",
-        icon: <PhishingViewResult />,
-      },
-      {
-        id: 6,
-        label: "Phishing Template",
-        routePath: "/phishing/template",
+        id: 3,
+        label: "Phishing Templates",
+        routePath: "/phishing/templates",
         icon: <PhishingViewResult />,
       },
     ],
