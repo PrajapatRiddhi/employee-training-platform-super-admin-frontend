@@ -30,6 +30,10 @@ interface CreatePhishingProps {
 
 const AddNewCompany: FC<CreatePhishingProps> = ({id, viewOnly}) => {
   const router: NextRouter = useRouter();
+
+  const handleData = () => {
+    console.log("data");
+  };
   //   const notificationContext = useNotification();
   //   const handleNotifications: any = notificationContext?.handleNotifications;
   //   const isEditing = !!id;
@@ -130,7 +134,7 @@ const AddNewCompany: FC<CreatePhishingProps> = ({id, viewOnly}) => {
         <Formik
           initialValues={initialValues}
           validationSchema={companyPhishingDestinationValidationSchema}
-          onSubmit={}
+          onSubmit={handleData}
           enableReinitialize
         >
           {({isSubmitting, errors, values, setFieldValue}) => {

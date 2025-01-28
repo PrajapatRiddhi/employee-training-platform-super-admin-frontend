@@ -27,7 +27,6 @@ import CustomSelect from "../CustomSelect";
 import BackArrowIcon from "../Icons/BackArrowIcon";
 import DateIcon from "../Icons/DateIcon";
 import TimeIcon from "../Icons/TimeIcon";
-import QuestionMarkSuggestion from "../QuestionMarkSuggestion";
 import {useLoader} from "@/src/components/Loader/LoaderProvider";
 import {useNotification} from "../Notification";
 import {
@@ -809,7 +808,7 @@ const AddUpdateLearningProgram: FC<AddUpdateLearningProgramProp> = ({id}) => {
                               </ErrorMessage>
                             </div>
                             <span className="ml-[10px]">
-                              <QuestionMarkSuggestion title=" End Date and Time" />
+                              {/* <QuestionMarkSuggestion title=" End Date and Time" /> */}
                             </span>
                           </div>
                         </div>
@@ -885,7 +884,7 @@ const AddUpdateLearningProgram: FC<AddUpdateLearningProgramProp> = ({id}) => {
                             />
 
                             <span className="ml-[10px] flex pt-[7px]">
-                              <QuestionMarkSuggestion title="" />
+                              {/* <QuestionMarkSuggestion title="" /> */}
                             </span>
                           </div>
                         </div>
@@ -904,7 +903,7 @@ const AddUpdateLearningProgram: FC<AddUpdateLearningProgramProp> = ({id}) => {
                     >
                       Allow assignments to be completed after due date{" "}
                     </Checkbox>
-                    <QuestionMarkSuggestion title="" />
+                    {/* <QuestionMarkSuggestion title="" /> */}
                   </Row>
                 )}
                 <StepButton />
@@ -989,9 +988,7 @@ const AddUpdateLearningProgram: FC<AddUpdateLearningProgramProp> = ({id}) => {
                     >
                       Enable Content Survey
                     </Checkbox>
-                    <div>
-                      <QuestionMarkSuggestion title="" />
-                    </div>
+                    <div>{/* <QuestionMarkSuggestion title="" /> */}</div>
                   </div>
                   <div className="h-[50px] rounded-sm bg-[#F2F2F2] items-center px-[20px] py-[15px]">
                     <Checkbox
@@ -1018,7 +1015,7 @@ const AddUpdateLearningProgram: FC<AddUpdateLearningProgramProp> = ({id}) => {
                     >
                       Track Scores
                     </Checkbox>
-                    <QuestionMarkSuggestion title="Track Scores" />
+                    {/* <QuestionMarkSuggestion title="Track Scores" /> */}
                   </div>
                   <div className="flex">
                     <Checkbox
@@ -1031,7 +1028,7 @@ const AddUpdateLearningProgram: FC<AddUpdateLearningProgramProp> = ({id}) => {
                     >
                       Track Replies to Phishing Emails
                     </Checkbox>
-                    <QuestionMarkSuggestion title="Track Scores" />
+                    {/* <QuestionMarkSuggestion title="Track Scores" /> */}
                   </div>
                 </div>
                 <Row
@@ -1093,14 +1090,14 @@ const AddUpdateLearningProgram: FC<AddUpdateLearningProgramProp> = ({id}) => {
                                 ? "Department"
                                 : "Group"}
                             </div>
-                            <QuestionMarkSuggestion
+                            {/* <QuestionMarkSuggestion
                               title={`${
                                 values?.selectType === "Department"
                                   ? "Department"
                                   : "Group"
                               } selection`}
                               size={16}
-                            />
+                            /> */}
                           </div>
                         }
                         labelClass="!text-[16px] !text-[#333]"
@@ -1181,7 +1178,7 @@ const AddUpdateLearningProgram: FC<AddUpdateLearningProgramProp> = ({id}) => {
                   <span className="flex">
                     {" "}
                     Enable automatic enrollment for new users{" "}
-                    <QuestionMarkSuggestion title="Enable automatic enrollment for new users" />
+                    {/* <QuestionMarkSuggestion title="Enable automatic enrollment for new users" /> */}
                   </span>
                 </Checkbox>
                 <div className="h-[50px] rounded-sm bg-[#F2F2F2] !items-center px-[20px] py-[15px] mt-[10px]">
@@ -1195,7 +1192,7 @@ const AddUpdateLearningProgram: FC<AddUpdateLearningProgramProp> = ({id}) => {
                   >
                     <span className="flex">
                       Enable progress reset for remedial training{" "}
-                      <QuestionMarkSuggestion title="Enable automatic enrollment for new users" />
+                      {/* <QuestionMarkSuggestion title="Enable automatic enrollment for new users" /> */}
                     </span>
                   </Checkbox>
                 </div>
@@ -1248,7 +1245,7 @@ const AddUpdateLearningProgram: FC<AddUpdateLearningProgramProp> = ({id}) => {
                   />
                 </div>
                 <div className="mt-[25px]  ml-[10px] flex items-center">
-                  <QuestionMarkSuggestion title="Select one or more items from the list" />
+                  {/* <QuestionMarkSuggestion title="Select one or more items from the list" /> */}
                 </div>
               </div>
               <div className="mt-[20px] flex w-full items-center">
@@ -1297,7 +1294,7 @@ const AddUpdateLearningProgram: FC<AddUpdateLearningProgramProp> = ({id}) => {
                   />
                 </div>
                 <div className="mt-[25px] ml-[10px] flex items-center">
-                  <QuestionMarkSuggestion title="Select one or more items from the list" />
+                  {/* <QuestionMarkSuggestion title="Select one or more items from the list" /> */}
                 </div>
               </div>
               <div className="mt-[20px] flex-col">
@@ -1385,7 +1382,7 @@ const AddUpdateLearningProgram: FC<AddUpdateLearningProgramProp> = ({id}) => {
                                       span={21}
                                       className="flex items-center"
                                     >
-                                      <QuestionMarkSuggestion title="Notification Type" />
+                                      {/* <QuestionMarkSuggestion title="Notification Type" /> */}
                                       <CustomSelect
                                         placeholder="Select Template"
                                         options={notificationTemplatesSource}
@@ -1439,7 +1436,7 @@ const AddUpdateLearningProgram: FC<AddUpdateLearningProgramProp> = ({id}) => {
                                       span={21}
                                       className="flex items-center"
                                     >
-                                      <QuestionMarkSuggestion title="Notification Type" />
+                                      {/* <QuestionMarkSuggestion title="Notification Type" /> */}
                                       <CustomSelect
                                         defaultValue={
                                           values.notificationTemplates[index]
@@ -1492,7 +1489,7 @@ const AddUpdateLearningProgram: FC<AddUpdateLearningProgramProp> = ({id}) => {
                                       span={21}
                                       className="flex items-center"
                                     >
-                                      <QuestionMarkSuggestion title="Notification Type" />
+                                      {/* <QuestionMarkSuggestion title="Notification Type" /> */}
                                       <CustomSelect
                                         placeholder="Select Template"
                                         defaultValue={

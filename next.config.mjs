@@ -1,13 +1,12 @@
-// next.config.js
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
   async rewrites() {
     return [
-      
       {
-        source: '/:path*',
-        destination: '/:path*',
+        source: "/:path*",
+        destination: "/:path*",
       },
     ];
   },
@@ -15,3 +14,4 @@ module.exports = {
     middleware: true,
   },
 };
+export default nextConfig;

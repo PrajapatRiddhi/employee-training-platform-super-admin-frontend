@@ -7,7 +7,6 @@ import {NextRouter, useRouter} from "next/router";
 import {useNotification} from "../Notification";
 import moment from "moment";
 import ActionsModal from "../Modals/ActionsModal";
-import MoveCategories from "../PhishingSimulation/MoveCategories";
 import SwitchToggle from "../SwitchToggle";
 import EditIcon from "../Icons/EditIcon";
 import DeleteIcon from "../Icons/DeleteIcon";
@@ -192,8 +191,7 @@ const TemplatesNotificationTable: FC<TemplatesNotificationProps> = ({
       render: (id: number, record: any) => (
         <div className="flex gap-2 cursor-pointer">
           {!selectedSystem && (
-            <div onClick={() => handleClone(record)} 
-              title="Clone">
+            <div onClick={() => handleClone(record)} title="Clone">
               <CopyIcon />
             </div>
           )}
@@ -254,14 +252,14 @@ const TemplatesNotificationTable: FC<TemplatesNotificationProps> = ({
             </span>
             {selectedCheckboxIds.length > 0 && (
               <div className="w-full mr-3">
-                <MoveCategories
+                {/* <MoveCategories
                   selectedCheckboxIds={selectedCheckboxIds}
                   fetchPhishingDestinationDetails={
                     fetchTemplatesNotificationDetails
                   }
                   selectedSystem={selectedSystem}
                   setSelectedCheckboxIDs={setSelectedCheckboxIDs}
-                />
+                /> */}
               </div>
             )}
           </div>
