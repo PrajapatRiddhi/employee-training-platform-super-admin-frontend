@@ -120,12 +120,6 @@ export const companyAdminNavBarItems: NavBarItem[] = [
         routePath: "/surveys",
         icon: <SurveyListMenuIcon />,
       },
-      {
-        id: 2,
-        label: "Survey Program",
-        routePath: "/surveys/programs",
-        icon: <SurveyProgramMenuIcon />,
-      },
     ],
   },
   {
