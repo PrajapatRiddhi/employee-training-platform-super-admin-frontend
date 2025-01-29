@@ -119,18 +119,18 @@ export const handleTitleNames = (urlPath?: string) => {
     urlPath = urlPath || window.location.pathname + window.location.search;
     let mainTitle = "Video";
     switch (true) {
-      case urlPath.startsWith("/content/upload-video-course") &&
+      case urlPath.startsWith("/manage-courses/upload-video-course") &&
         urlPath.includes("?id="):
         mainTitle = "Upload Video";
         break;
-      case urlPath.startsWith("/content/upload-scorm") &&
+      case urlPath.startsWith("/manage-courses/upload-scorm") &&
         urlPath.includes("?id="):
         mainTitle = "Upload SCORM";
         break;
-      case urlPath === "/content/create-courses":
+      case urlPath === "/manage-courses/add":
         mainTitle = "Create New Course";
         break;
-      case urlPath.startsWith("/content/edit-course") &&
+      case urlPath.startsWith("/manage-courses/edit") &&
         urlPath.includes("?id="):
         mainTitle = "Edit Course";
         break;

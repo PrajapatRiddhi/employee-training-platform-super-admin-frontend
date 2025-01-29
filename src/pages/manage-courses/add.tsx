@@ -199,7 +199,6 @@ const CreateCourses: FC<CreateCourseProps> = ({
     }
   };
 
-  console.log(imageUrl, "imageUrl");
   const fetchTheTypeName = fetchedData?.mediaType;
 
   useEffect(() => {

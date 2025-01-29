@@ -80,10 +80,11 @@ const ViewCourses: React.FC<ViewCoursDropProps> = ({selectedSystem}) => {
   const handleScormEdit = (record: any) => {
     SetSelectedEditId(record);
     router.push({
-      pathname: `/manage-course/upload-scorm`,
+      pathname: `/manage-courses/upload-scorm`,
       query: {id: record.courseId},
     });
   };
+
   const videoFormats = [".mp4", ".mov", ".avi", ".mkv"];
   const renderMediaContent = () => {
     const {mediaType, mediaUrl, mediaName} = viewCourseDetails;
