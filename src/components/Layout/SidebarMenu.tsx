@@ -84,29 +84,7 @@ export const companyAdminNavBarItems: NavBarItem[] = [
     id: 5,
     label: "Learning Programs",
     icon: <LearningProgramsIcon />,
-    routePath: "",
-    children: [
-      {
-        id: 1,
-        label: "Program",
-        routePath: "/learning-program",
-        icon: <PhishingProgram />,
-      },
-      {
-        id: 2,
-        label: "Notification Templates",
-        routePath: "/learning-program/notification",
-        icon: (
-          <Image preview={false} src={"/user-alt.png"} width={24} height={24} />
-        ),
-      },
-      {
-        id: 3,
-        label: "Policies",
-        routePath: "/learning-program/policies",
-        icon: <PolicieIcon />,
-      },
-    ],
+    routePath: "/learning-program",
   },
   {
     id: 6,

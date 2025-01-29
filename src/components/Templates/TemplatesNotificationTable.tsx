@@ -59,7 +59,7 @@ const TemplatesNotificationTable: FC<TemplatesNotificationProps> = ({
   const handleEdit = (record: any) => {
     SetSelectedEditId(record);
     router.push({
-      pathname: `/learning-program/edit-notification`,
+      pathname: `/learning-program/edit`,
       query: {id: record.notificationTemplateId},
     });
   };
