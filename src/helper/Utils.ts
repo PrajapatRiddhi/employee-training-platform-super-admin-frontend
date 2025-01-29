@@ -55,19 +55,19 @@ export const handleCategoryType = (urlPath?: string) => {
       case "/phishing/template":
         CategoryTypeName = "PHISHING_TEMPLATES";
         break;
-      case "/learning-program/notification":
+      case "/learning-program":
         CategoryTypeName = "NOTIFICATION_TEMPLATES";
         break;
       case "/surveys":
         CategoryTypeName = "SURVEY";
         break;
-      case "/courses/create-course":
+      case "/manage-courses/add":
         CategoryTypeName = "COURSE";
         break;
-      case "/courses/edit-course":
+      case "/manage-courses/edit":
         CategoryTypeName = "COURSE";
         break;
-      case "/content/categories":
+      case "/manage-courses/categories":
         CategoryTypeName = "COURSE";
         break;
       case "/template/policies":

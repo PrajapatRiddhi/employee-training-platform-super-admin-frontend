@@ -13,6 +13,7 @@ import DeleteIcon from "../Icons/DeleteIcon";
 import EmailPreview from "../EmailPreview";
 import CopyIcon from "../Icons/CopyIcon";
 import React from "react";
+import MoveCategories from "../PhishingSimulation/MoveCategories";
 
 interface TemplatesNotificationProps {
   selectedSystem: boolean;
@@ -252,14 +253,14 @@ const TemplatesNotificationTable: FC<TemplatesNotificationProps> = ({
             </span>
             {selectedCheckboxIds.length > 0 && (
               <div className="w-full mr-3">
-                {/* <MoveCategories
+                <MoveCategories
                   selectedCheckboxIds={selectedCheckboxIds}
                   fetchPhishingDestinationDetails={
                     fetchTemplatesNotificationDetails
                   }
                   selectedSystem={selectedSystem}
                   setSelectedCheckboxIDs={setSelectedCheckboxIDs}
-                /> */}
+                />
               </div>
             )}
           </div>
