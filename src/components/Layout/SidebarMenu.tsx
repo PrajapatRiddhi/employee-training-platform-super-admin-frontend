@@ -74,7 +74,7 @@ export const companyAdminNavBarItems: NavBarItem[] = [
       {
         id: 1,
         label: "B2B User Subscriptions",
-        routePath: "/users",
+        routePath: "/company",
         icon: <DashboardIcon />,
       },
     ],

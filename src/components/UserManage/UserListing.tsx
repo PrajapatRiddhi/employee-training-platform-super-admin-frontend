@@ -8,6 +8,7 @@ import ViewIcon from "../Icons/ViewIcon";
 import {PlusOutlined} from "@ant-design/icons";
 import React from "react";
 import ThreeDotsDropdown from "../ThreeDotsDropdown";
+import {useRouter} from "next/router";
 
 const userListing = [
   {
@@ -50,6 +51,7 @@ const userListing = [
 const UserListing: FC = () => {
   const [source, setSource] = useState(userListing);
   const [openDeleteUI, setOpenDeleteUI] = useState(false);
+  const router = useRouter();
 
   const handleDeleteUI = () => {
     setOpenDeleteUI(!openDeleteUI);
@@ -85,7 +87,10 @@ const UserListing: FC = () => {
       dataIndex: "action",
       render: (text: any, record: any) => (
         <div className="space-x-[10px] flex ">
-          <span className="cursor-pointer">
+          <span
+            onClick={() => router.push("/company/view")}
+            className="cursor-pointer"
+          >
             <ViewIcon />
           </span>
           <span onClick={handleDeleteUI} className="cursor-pointer">
@@ -166,7 +171,7 @@ const UserListing: FC = () => {
             <Button
               type="primary"
               className="custom-heading-btn"
-              // onClick={() => router.push("/users/add")}
+              onClick={() => router.push("/company/add")}
             >
               <PlusOutlined />
               Add New Company
