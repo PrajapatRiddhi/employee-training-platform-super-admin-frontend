@@ -26,7 +26,7 @@ const ChangePassword: FC = () => {
         router.push("/login");
       }
       const resetPassword: any = await axiosInstance.post(
-        API_ENDPOINTS.COMPANY_RESET_PASSWORD,
+        API_ENDPOINTS.RESETPASSWORD_SUPER_ADMIN,
         JSON.stringify({
           password: values.confirmPassword,
           token,

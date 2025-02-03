@@ -10,11 +10,8 @@ import UrlIcon from "@/src/components/Icons/UrlIcon";
 import moment from "moment";
 import {useLoader} from "@/src/components/Loader/LoaderProvider";
 import {useRouter} from "next/router";
-import TagComponent from "@/src/components/TagComponent";
 import {MailOutlined, UserOutlined} from "@ant-design/icons";
-import DisplayedLibraryIcon from "@/src/components/Icons/DisplayedLibraryIcon";
-import CalendarAltIcon from "@/src/components/Icons/CalendarAltIcon";
-import ClockIcon from "@/src/components/Icons/ClockIcon";
+import ConfromationModal from "@/src/components/Modals/ConfromationModal";
 
 const ViewCompany: FC = () => {
   const router = useRouter();
@@ -64,7 +61,7 @@ const ViewCompany: FC = () => {
             <LeftArrowIcon />
           </div>
           <div className="text-[24px] font-[700] text-[#313D4F] mb-[30px] ml-2 pt-1">
-            Course Detail
+            Company Detail
           </div>
         </div>
         <div>
@@ -75,31 +72,22 @@ const ViewCompany: FC = () => {
                   <div className="text-[#4379EE] text-[22px]  font-[600] leading-[28px]">
                     Quick Fix Solutions
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 mt-2">
                     <MailOutlined />
-                    <div className="text-[#4F4F4F] text-[16px] leading-[24px font-[400]">quickfix564@test.com</div>
-                  </div>
-
-                  <div className="flex mt-1 h-[34px] text-center cursor-pointer">
-                    <div>
-                      <TagComponent
-                        title={
-                          <div className="!text-[16px] text-[#4F4F4F] text-list">
-                            More
-                          </div>
-                        }
-                        icon={<UserOutlined />}
-                      />
+                    <div className="text-[#4F4F4F] text-[16px] leading-[24px font-[400]">
+                      quickfix564@test.com
                     </div>
-
-                    <TagComponent
-                      title={
-                        <div className="!text-[16px] text-[#4F4F4F] text-list pl-2">
-                          {"Displayed in Library"}
-                        </div>
-                      }
-                      icon={<DisplayedLibraryIcon />}
-                    />
+                  </div>
+                  <Divider type="vertical" />
+                </div>
+                <div className="w-full">
+                  <div className="text-[#4379EE] text-[22px]  font-[600] leading-[28px]">
+                    Users
+                  </div>
+                  <div className="flex gap-2 mt-2">
+                    <div className="text-[#4F4F4F] text-[16px] leading-[24px font-[400]">
+                      1200
+                    </div>
                   </div>
                 </div>
                 {/* {viewCourseDetails?.isSystemCourse === "No" ? (
@@ -119,33 +107,47 @@ const ViewCompany: FC = () => {
               <div className="flex mt-5">
                 <div className="flex-grow gap-0">
                   <div className="divider-level-table w-fit flex items-center">
-                    <div className="p-[20px] list-data-wrapped flex flex-col items-center justify-center gap-[5px]">
-                      <div className="text-[14px] text-[#828282] font-normal mr-2">
-                        Expected Duration
+                    <div className="p-[20px] list-data-wrapped flex flex-col  gap-[5px]">
+                      <div className="text-[18px] font-[400]  text-[#000000]  leading-[26px] mr-2">
+                        Setup Type
                       </div>
-                      <div className="text-[14px] !text-[#4F4F4F] font-normal mr-2">
-                        sdasdasd
+                      <div className="text-[16px] !text-[#333333] font-[400] leading-[24px] mr-2">
+                        Basic (Silver & Gold)
                       </div>
                     </div>
                     <Divider
                       type="vertical"
                       className="bg-[#E8E8E8] w-[1px] h-[76px]"
                     />
-                    <div className="p-[20px]  list-data-wrapped flex flex-col items-center justify-center gap-[5px]">
-                      <div className="text-[14px] text-[#828282] font-normal ml-2">
-                        Last Update
+                    <div className="p-[20px]  list-data-wrapped flex flex-col  gap-[5px]">
+                      <div className="text-[18px] font-[400]  text-[#000000]  leading-[26px]">
+                        API key / URL
                       </div>
                       <div className="flex items-center gap-1">
-                        <CalendarAltIcon />
+                        <div className="text-[16px] !text-[#333333] font-[400] leading-[24px]">
+                          {" "}
+                          AIzaSyDaGmWKa4JsXZ-HjGw7ISLn_3namBGewQe
+                        </div>
+                      </div>
+                    </div>
+
+                    <Divider
+                      type="vertical"
+                      className="bg-[#E8E8E8] w-[1px] h-[76px]"
+                    />
+                    <div className="p-[20px]  list-data-wrapped flex flex-col  gap-[5px]">
+                      <div className="text-[18px] font-[400]  text-[#000000]  leading-[26px]">
+                        Subscription Plan
+                      </div>
+                      <div className="flex  gap-1">
                         <div className="text-[14px] text-[#4F4F4F]">
                           {" "}
-                          sdsdfsfsf
+                          Plan: Silver $450
                         </div>
                       </div>
 
                       <div className="flex items-center gap-1 mr-1 mb-[11px]">
-                        <ClockIcon />
-                        asdsadadasd
+                        Start Date: Nov 7, 2022 - End Date: Nov 7, 2022
                       </div>
                     </div>
                   </div>
@@ -153,6 +155,101 @@ const ViewCompany: FC = () => {
               </div>
             </div>
           </div>
+
+          <div className="rounded-[10px] p-[30px] custom-card">
+            <div className="flex justify-between">
+              <div>
+                <div className="text-[18px] font-[400] leading-[26px] text-[#000000]">
+                  Company Address
+                </div>
+                <div className="flex gap-2 mt-2">
+                  <div className="text-[14px] font-[600] leading-[20px] text-[#828282]">
+                    Address 1 :{" "}
+                  </div>
+                  <div className="text-[14px] font-[600] leading-[20px] text-[#4F4F4F]">
+                    11968 Foothill Blvd
+                  </div>
+                </div>
+                <div className="flex gap-2 mt-2">
+                  <div className="text-[14px] font-[600] leading-[20px] text-[#828282]">
+                    Address 2 :{" "}
+                  </div>
+                  <div className="text-[14px] font-[600] leading-[20px] text-[#4F4F4F]">
+                    High Street Road
+                  </div>
+                </div>
+                <div className="flex gap-2 mt-2">
+                  <div className="text-[14px] font-[600] leading-[20px] text-[#828282]">
+                    City:
+                  </div>
+                  <div className="text-[14px] font-[600] leading-[20px] text-[#4F4F4F]">
+                    Lake View Terrace
+                  </div>
+                </div>
+
+                <div className="flex gap-2 mt-2">
+                  <div className="text-[14px] font-[600] leading-[20px] text-[#828282]">
+                    State :
+                  </div>
+                  <div className="text-[14px] font-[600] leading-[20px] text-[#4F4F4F]">
+                    California
+                  </div>
+                </div>
+
+                <div className="flex gap-2 mt-2">
+                  <div className="text-[14px] font-[600] leading-[20px] text-[#828282]">
+                    County :
+                  </div>
+                  <div className="text-[14px] font-[600] leading-[20px] text-[#4F4F4F]">
+                    United States
+                  </div>
+                </div>
+                <div className="flex gap-2 mt-2">
+                  <div className="text-[14px] font-[600] leading-[20px] text-[#828282]">
+                    Zip Code :
+                  </div>
+                  <div className="text-[14px] font-[600] leading-[20px] text-[#4F4F4F]">
+                    382305
+                  </div>
+                </div>
+              </div>
+              <div className="w-[2px] bg-red-500 h-full mx-6">dd</div>
+              <div>
+                <div className="text-[18px] font-[400] leading-[26px] text-[#000000]">
+                  Admin Details
+                </div>
+
+                <div className="flex gap-2 mt-2">
+                  <div className="text-[14px] font-[600] leading-[20px] text-[#828282]">
+                    Name:{" "}
+                  </div>
+                  <div className="text-[14px] font-[600] leading-[20px] text-[#4F4F4F]">
+                    John Doe
+                  </div>
+                </div>
+                <div className="flex gap-2 mt-2">
+                  <div className="text-[14px] font-[600] leading-[20px] text-[#828282]">
+                    Email :
+                  </div>
+                  <div className="text-[14px] font-[600] leading-[20px] text-[#4F4F4F]">
+                    test@gmail.com
+                  </div>
+                </div>
+                <div className="flex gap-2 mt-2">
+                  <div className="text-[14px] font-[600] leading-[20px] text-[#828282]">
+                    Contact :
+                  </div>
+                  <div className="text-[14px] font-[600] leading-[20px] text-[#4F4F4F]">
+                    +01 0000 0000
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ConfromationModal
+            mainTitle="Test Data"
+            description={"You are Holding 1 selected User."}
+          />
         </div>
       </SidebarLayout>
     </div>
