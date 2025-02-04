@@ -11,11 +11,14 @@ import {EyeInvisibleOutlined, EyeOutlined} from "@ant-design/icons";
 import axiosInstance from "../interceptors/Axios";
 import {API_ENDPOINTS} from "../interceptors/apiName";
 import {useNotification} from "../components/Notification";
+import {useParams, useSearchParams} from "next/navigation";
 
 const initialValues = {password: "", confirmPassword: ""};
 
 const ChangePassword: FC = () => {
   const notificationContext = useNotification();
+  const searchParams = useSearchParams();
+  const authToken = searchParams.get("t");
   const handleNotifications: any = notificationContext?.handleNotifications;
   const router = useRouter();
   const handleSubmit = async (values: any) => {
@@ -30,10 +33,10 @@ const ChangePassword: FC = () => {
         API_ENDPOINTS.RESETPASSWORD_SUPER_ADMIN,
         JSON.stringify({
           password: values.confirmPassword,
-          token: token,
+          token: authToken,
         })
       );
-      console.log("token Test", token);
+      console.log("token Test", authToken);
       if (resetPassword?.settings?.success) {
         handleNotifications("success", resetPassword?.settings?.message, "", 3);
         localStorage.removeItem("token");
