@@ -21,6 +21,7 @@ const ChangePassword: FC = () => {
   const handleSubmit = async (values: any) => {
     try {
       const token = localStorage.getItem("token");
+      console.log(token, "token");
       if (!token) {
         handleNotifications("error", `Something went wrong!`, "Try again!", 3);
         router.push("/login");
@@ -29,9 +30,10 @@ const ChangePassword: FC = () => {
         API_ENDPOINTS.RESETPASSWORD_SUPER_ADMIN,
         JSON.stringify({
           password: values.confirmPassword,
-          token,
+          token: token,
         })
       );
+      console.log("token Test", token);
       if (resetPassword?.settings?.success) {
         handleNotifications("success", resetPassword?.settings?.message, "", 3);
         localStorage.removeItem("token");
