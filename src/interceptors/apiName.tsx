@@ -132,5 +132,5 @@ export const API_ENDPOINTS = {
   TEST_EMAIL_PHISHING_TEMPLATES: "/phishing-template/phishing-test-email",
   AUTOCOMPLETE_DEPARTMENT_DATA: "/department/autocomplete",
   CHANGE_COURSE_STATUS: "/course/change-status",
-  RESETPASSWORD_SUPER_ADMIN: "/reset-password",
+  RESETPASSWORD_SUPER_ADMIN: "/auth/reset-password",
 };
